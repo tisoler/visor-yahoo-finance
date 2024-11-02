@@ -1,0 +1,8 @@
+# Build and start the container
+docker-compose up --build -d
+
+# Stop and remove the container
+docker-compose down
+
+# View logs
+docker-compose logs -f

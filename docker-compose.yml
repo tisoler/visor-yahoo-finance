@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  yahoo-visor:
+    container_name: yahoo-visor
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3075:3075"
+    restart: unless-stopped
+    # Add healthcheck to ensure the application is running
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "http://localhost:3075"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
