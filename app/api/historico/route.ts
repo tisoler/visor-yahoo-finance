@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     const result = await yahooFinance.historical(symbol, queryOptions);
 
     // Format the data
-    const formattedData = result?.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())?.map(item => ({
+    const formattedData = result?.map(item => ({
       date: item.date.toISOString().split('T')[0],
       open: item.open,
       high: item.high,

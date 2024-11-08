@@ -190,14 +190,14 @@ const StockHistoryViewer = () => {
           />
 
           <DatePicker
-            label="From Date"
+            label="Desde"
             value={dateFrom}
             onChange={setDateFrom}
             slotProps={{ textField: { variant: 'outlined' } }}
           />
 
           <DatePicker
-            label="To Date"
+            label="Hasta"
             value={dateTo}
             onChange={setDateTo}
             slotProps={{ textField: { variant: 'outlined' } }}
