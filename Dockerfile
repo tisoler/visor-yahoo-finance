@@ -1,5 +1,5 @@
 # Stage 1: Building the code
-FROM node:18-alpine AS builder
+FROM node:23-alpine AS builder
 
 WORKDIR /yahoo-visor
 
@@ -17,7 +17,7 @@ COPY next.config.ts ./
 RUN yarn build
 
 # Stage 2: Run the built code
-FROM node:18-alpine AS runner
+FROM node:23-alpine AS runner
 WORKDIR /yahoo-visor
 
 # Set to production

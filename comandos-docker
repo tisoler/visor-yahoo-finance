@@ -1,6 +1,8 @@
 # Build and start the container
 docker-compose up --build -d
 
+docker-compose up --build --force-recreate
+
 # Stop and remove the container
 docker-compose down
 
